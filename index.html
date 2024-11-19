@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVATE-IQ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>ELEVATE-IQ</h1>
+        <h3>Real Time Lift Monitoring and Optimizing Platform</h3>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-elevator"></i> Lift Status</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="main-content">
+            <div class="status-header">
+                <h1><b>Dashboard</b></h1>
+            </div>
+
+            <div class="floor-selection">
+                <label for="user-floor">Select Your Current Floor:</label>
+                <select id="user-floor" onchange="onFloorChange()">
+                    <option value="0">Ground Floor</option>
+                    <option value="1">1st Floor</option>
+                    <option value="2">2nd Floor</option>
+                    <option value="3">3rd Floor</option>
+                </select>
+            </div>
+
+            <div class="lift-status-container">
+                <div class="lift-box-container" id="lift1">
+                    <h2>Lift 1</h2>
+                    <div class="lift-shaft">
+                        <div id="lift-box-1" class="lift-box"></div>
+                    </div>
+                    <p>Current Floor: <span id="current-floor-1">0</span></p>
+                    <p>Status: <span id="lift-status-1" class="normal">Normal</span></p>
+                </div>
+                <div class="lift-box-container" id="lift2">
+                    <h2>Lift 2</h2>
+                    <div class="lift-shaft">
+                        <div id="lift-box-2" class="lift-box"></div>
+                    </div>
+                    <p>Current Floor: <span id="current-floor-2">0</span></p>
+                    <p>Status: <span id="lift-status-2" class="normal">Normal</span></p>
+                </div>
+                <div class="lift-box-container" id="lift3">
+                    <h2>Lift 3</h2>
+                    <div class="lift-shaft">
+                        <div id="lift-box-3" class="lift-box"></div>
+                    </div>
+                    <p>Current Floor: <span id="current-floor-3">0</span></p>
+                    <p>Status: <span id="lift-status-3" class="normal">Normal</span></p>
+                </div>
+                <div class="lift-box-container" id="lift4">
+                    <h2>Lift 4</h2>
+                    <div class="lift-shaft">
+                        <div id="lift-box-4" class="lift-box"></div>
+                    </div>
+                    <p>Current Floor: <span id="current-floor-4">0</span></p>
+                    <p>Status: <span id="lift-status-4" class="normal">Normal</span></p>
+                </div>
+            </div>
+
+            <div class="recommendation">
+                <h2>Recommended Lift: <span id="recommended-lift">-</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
